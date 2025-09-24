@@ -5,22 +5,21 @@ import logging
 from time import sleep
 from datetime import datetime
 
-# Настройка логирования
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
-# Конфигурация из переменных окружения
 API_URL = os.getenv('API_URL', 'https://jsonplaceholder.typicode.com/posts')
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'localhost'),
+    'host': os.getenv('DB_HOST', 'db'),
     'database': os.getenv('DB_NAME', 'postgres'),
     'user': os.getenv('DB_USER', 'postgres'),
     'password': os.getenv('DB_PASSWORD', 'postgres')
 }
 
+# logger.info(f"DB connection config: host={DB_CONFIG['host']}, db={DB_CONFIG['database']}, user={DB_CONFIG['user']}")
 
 def get_connection():
     return psycopg2.connect(**DB_CONFIG)

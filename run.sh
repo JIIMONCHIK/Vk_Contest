@@ -2,6 +2,10 @@
 
 echo "Запуск проекта..."
 
+set -a
+source .env
+set +a
+
 # Сборка и запуск контейнеров
 docker-compose down
 docker-compose build

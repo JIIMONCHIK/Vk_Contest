@@ -99,7 +99,7 @@
             </div>
             <div class="stat-item">
                 <div class="stat-value">{{ avg_posts }}</div>
-                <div class="stat-label">Среднее постов на пользователя</div>
+                <div class="stat-label">Среднее количество постов на пользователя</div>
             </div>
         </div>
 
@@ -137,14 +137,13 @@
     </div>
 
     <script>
-        // Автоматическое обновление каждые 5 минут
+        // Автоматическое обновление каждые 2 минуты
         setTimeout(() => {
             location.reload();
-        }, 300000);
+        }, 120000);
         
-        // Добавляем анимацию при обновлении
         document.querySelector('.refresh-btn').addEventListener('click', function() {
-            this.innerHTML = '⏳ Обновление...';
+            this.innerHTML = 'Обновление...';
             this.disabled = true;
         });
     </script>

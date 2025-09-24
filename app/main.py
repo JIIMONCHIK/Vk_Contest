@@ -11,7 +11,7 @@ app = FastAPI(title="Top Users Dashboard")
 templates = Jinja2Templates(directory="app/templates")
 
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'localhost'),
+    'host': os.getenv('DB_HOST', 'db'),
     'database': os.getenv('DB_NAME', 'postgres'),
     'user': os.getenv('DB_USER', 'postgres'),
     'password': os.getenv('DB_PASSWORD', 'postgres')
