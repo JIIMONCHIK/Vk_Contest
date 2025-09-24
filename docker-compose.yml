@@ -22,8 +22,8 @@ services:
       DB_PASSWORD: ${POSTGRES_PASSWORD}
     depends_on:
       - db
-    volumes:
-      - .:/app
+    # volumes:
+    #   - .:/app
 
   web:
     build: .
